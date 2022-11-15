@@ -4,6 +4,7 @@ require '../Modules/login.php';
 require '../Modules/logout.php';
 require '../Modules/database.php';
 require '../Modules/common.php';
+require '../Modules/fietsen.php';
 
 session_start();
 //var_dump($_SESSION);
@@ -57,6 +58,12 @@ switch ($params[1]) {
 
     case 'admin':
         include_once ('admin.php');
+        break;
+
+    case 'fietsen':
+        $result = getFietsen();
+        include_once "../templates/defaults/fiets.php";
+
         break;
 
     case 'member':
