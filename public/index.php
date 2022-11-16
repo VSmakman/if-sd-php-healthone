@@ -62,8 +62,12 @@ switch ($params[1]) {
 
     case 'fietsen':
         $result = getFietsen();
-        include_once "../templates/defaults/fiets.php";
+        include_once "../Templates/fietsen.php";
+        break;
 
+    case 'detail':
+        $detail = getFiets($params[2]);
+        include_once "../Templates/detail.php";
         break;
 
     case 'member':
