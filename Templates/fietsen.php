@@ -14,7 +14,11 @@ include_once('defaults/head.php');
         <th>Number</th>
         <th>Merk</th>
         <th>Naam</th>
+        <th>Prijs</th>
+        <th>Voorraad</th>
         <th>Details</th>
+        <th></th>
+        <th></th>
     <?php
     include_once "defaults/fiets.php";
     ?>

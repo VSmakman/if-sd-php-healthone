@@ -70,6 +70,20 @@ switch ($params[1]) {
         include_once "../Templates/detail.php";
         break;
 
+    case 'update':
+        if(isset($_GET['verzenden'])) {
+            $updatefiets=updateFiets($params[2]);
+        } else {
+            //formulier tonen met ingevulde velden
+            $fiets=getFiets($params[2]);
+
+            include_once "../Templates/update.php";
+        }
+
+
+
+        break;
+
     case 'member':
         include_once ('member.php');
         break;
